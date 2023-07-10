@@ -1,0 +1,182 @@
+\documentclass[a4paper, oneside, 10pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{hyperref}
+    \hypersetup{
+    	colorlinks=true,
+    	citecolor=black,
+    	linkcolor=blue,
+    	filecolor=blue,      
+    	urlcolor=blue
+    }
+\usepackage[small]{caption}
+\usepackage[figuresright]{rotating}
+% Añade al índice los entornos subsubsection
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+% Entornos multicolumna
+\usepackage{multicol}
+% Entornos de lista
+\usepackage{enumitem}
+% Entornos float (imagenes y demás)
+\usepackage{floatrow}	% Permite poner a un lado los pies de imagen
+\usepackage{subcaption}
+\usepackage{lscape}
+% Entornos matemáticos y elementos matemáticos
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+% Letaras y caracteres especiales (por problemas usando €)
+\usepackage{marvosym}
+%\DeclareUnicodeCharacter{20AC}{\EUR{}}
+% Entornos de tabla modificados
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{N}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{tabulary}
+% Entorno que permiten generar colores
+\usepackage[table, dvipsnames]{xcolor}
+%%%% Gris muy claro
+\definecolor{hiperlightgray}{gray}{0.85}
+% Entornos para añadir algoritmos y fragmentos de código
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{listings}
+\lstset{
+    backgroundcolor=\color{hiperlightgray},   % Indica el color de fondo; necesita que se añada \usepackage{color} o \usepackage{xcolor}
+    basicstyle=\scriptsize,
+    showstringspaces=false,
+    formfeed=newpage,
+    tabsize=4,
+    commentstyle=\itshape,
+    morekeywords={models, lambda, forms}
+}
+
+% set margins for double-sided printing
+\usepackage[left=1.2cm, right=1.2cm, top=1.4cm, bottom=1.4cm, bindingoffset=1.2cm, head=15pt]{geometry} 
+\usepackage{setspace}
+\onehalfspacing
+% set headers
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead{}
+    \fancyhead[R]{\thesisauthor}
+    \fancyhead[L]{\title}
+    \fancyfoot{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+
+% set APA citation style
+\usepackage{apacite}
+\usepackage[numbib,notlof,notlot,nottoc]{tocbibind}
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%THESIS Parameters 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Curso Fundamental de Biología}
+
+\newcommand{\thesisdate}{\today}
+\newcommand{\thesisauthor}{Alejandro Cebrián del Valle} %input name
+%\newcommand{\studentID}{999999999} %input student ID
+\newcommand{\thesistype}{Recopilación y ampliaciones} % Set either to Bachelor or Master
+\newcommand{\proyecto}{Biblioteca personal de Educación}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %TITLE PAGE (Pre-defined, just change parameters above)
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \include{./A.secciones/Title}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %TOC,TOF,TOT
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \clearpage
+    \pagenumbering{Roman}
+    \tableofcontents
+    \clearpage
+    \listoffigures
+    \clearpage
+    \listoftables
+    \clearpage
+    \listofEcuacion
+    \clearpage
+    \listofFormula
+    \clearpage
+    
+    \pagenumbering{arabic}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %MAIN PART
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \part{Introducción a la biología y ciencias afines}
+    \input{./Matematicas/ACV-BIOESTAT-EstadisticaI}
+    \part{Bioquímica}
+    \input{./Bioquimica/ACV-BIOQ-Proteinas}
+    
+    \part{Botánica y Fisiología vegetal}
+    \part{Citología e Histología}
+    \input{./CitologiaHistologiaEmbriologia/secciones/ACV-CITO-Introduccion}
+    \input{../CitologiaHistologia/README/secciones/ACV-CITO-Transporte}
+    \part{Embriología}
+    \part{Fisiología}
+    \part{Genética y Biología Molecular}
+    \part{Microbiología}
+    % SEC I - Introducción
+    \input{../Microbiologia/README/secciones/ACV-MICROBIO-Tema1-Introduccion}
+    % SEC X - Citoplasma
+    \input{../Microbiologia/README/secciones/ACV-MICROBIO-TemaX-Citoplasma}
+    \part{Parasitología}
+    % SEC I - Introducción
+    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema1-Introduccion}
+    % SEC I - Protozoos
+    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema2-Protozoa}
+    % SEC III - Platelmintos
+    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema3-Plathelmintes}
+    % SEC IV - Nemátodos
+    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema4-Nemathelmintes}
+    % SEC V - Artropodos
+    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema5-Arthropoda}
+    \part{Zoología}
+    \input{../Zoologia/A.README/secciones/ACV-ANATANIM-Introduccion}
+    \part{Metodologías de laboratorio}
+    \input{secciones/ACV-ADENDA-MetodologiasLaboratorio}
+    \part{Epidemiología}
+    % SEC I - Introducción
+    \input{../Epidemiologia/README/secciones/ACV-EPI-Intro}
+    % SEC II - Tipos de estudio
+    \input{../Epidemiologia/README/secciones/ACV-EPI-TiposEstudio}
+    % SEC III - Medidas Frecuencia
+    \input{../Epidemiologia/README/secciones/ACV-EPI-MedidasFrecuencia}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %APPENDICES
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \part{Adendas}
+    \appendix
+    \renewcommand*{\thesection}{\Alph{section}}\textbf{}
+    % APPENDIX A
+    %\input{Appendices/Appendix_1.tex}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %BIBLIOGRAPHY
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %\part{Adendas}
+    % SEC Adenda Temario Ayudante Investigacion
+    \input{secciones/ACV-Adenda-ExposicionRiesgosBiologicos}
+    \clearpage
+    \input{secciones/ACV-Adenda-SistemaMedidas}
+    \clearpage
+    \input{secciones/ACV-Adenda-Calibracion}
+    \clearpage
+    \renewcommand*{\thesection}{}\textbf{}
+    
+    \bibliographystyle{apacite}
+    \bibliography{Bibliography}
+\end{document}
