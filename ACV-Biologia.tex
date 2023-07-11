@@ -13,6 +13,9 @@
     	urlcolor=blue
     }
 \usepackage[small]{caption}
+    \DeclareCaptionType[]{Ecuacion}[Ecuación][Lista de Ecuaciones]
+    \DeclareCaptionType[]{Formula}[Fórmula][Lista de Formulas]
+\usepackage{capt-of}
 \usepackage[figuresright]{rotating}
 % Añade al índice los entornos subsubsection
 \setcounter{tocdepth}{3}
@@ -29,16 +32,22 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{dsfont}
+\usepackage{mathtools}
+\usepackage{ulem}	% Permite tachar palabras
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\CC}{\mathbb{C}}
 % Letaras y caracteres especiales (por problemas usando €)
 \usepackage{marvosym}
 %\DeclareUnicodeCharacter{20AC}{\EUR{}}
 % Entornos de tabla modificados
 \usepackage{multirow}
 \usepackage{array}
-\newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{N}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{P}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+    \newcolumntype{M}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+    \newcolumntype{N}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+    \newcolumntype{P}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage{tabulary}
 % Entorno que permiten generar colores
 \usepackage[table, dvipsnames]{xcolor}
@@ -56,11 +65,14 @@
     commentstyle=\itshape,
     morekeywords={models, lambda, forms}
 }
-
+% Entorno para estructuras químicas
+\usepackage{tikz,pgfplots}
+\usepackage{chemformula}
+\usepackage{chemfig}
 % set margins for double-sided printing
 \usepackage[left=1.2cm, right=1.2cm, top=1.4cm, bottom=1.4cm, bindingoffset=1.2cm, head=15pt]{geometry} 
 \usepackage{setspace}
-\onehalfspacing
+    \onehalfspacing
 % set headers
 \usepackage{fancyhdr}
     \pagestyle{fancy}
@@ -124,38 +136,39 @@
     
     \part{Botánica y Fisiología vegetal}
     \part{Citología e Histología}
-    \input{./CitologiaHistologiaEmbriologia/secciones/ACV-CITO-Introduccion}
-    \input{../CitologiaHistologia/README/secciones/ACV-CITO-Transporte}
+     \input{./CitologiaHistologiaEmbriologia/ACV-CITO-Introduccion}
+     \input{./CitologiaHistologiaEmbriologia/ACV-CITO-Transporte}
     \part{Embriología}
     \part{Fisiología}
     \part{Genética y Biología Molecular}
     \part{Microbiología}
     % SEC I - Introducción
-    \input{../Microbiologia/README/secciones/ACV-MICROBIO-Tema1-Introduccion}
+     \input{./Microbiologia/ACV-MICROBIO-Tema1-Introduccion}
+     \input{./Microbiologia/ACV-MICROBIO-Tema2-Tinciones}
     % SEC X - Citoplasma
-    \input{../Microbiologia/README/secciones/ACV-MICROBIO-TemaX-Citoplasma}
+     \input{./Microbiologia/ACV-MICROBIO-TemaX-Citoplasma}
     \part{Parasitología}
     % SEC I - Introducción
-    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema1-Introduccion}
+     \input{./Parasitologia/ACV-PARASIT-Tema1-Introduccion}
     % SEC I - Protozoos
-    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema2-Protozoa}
+     \input{./Parasitologia/ACV-PARASIT-Tema2-Protozoa}
     % SEC III - Platelmintos
-    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema3-Plathelmintes}
+     \input{./Parasitologia/ACV-PARASIT-Tema3-Plathelmintes}
     % SEC IV - Nemátodos
-    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema4-Nemathelmintes}
+     \input{./Parasitologia/ACV-PARASIT-Tema4-Nemathelmintes}
     % SEC V - Artropodos
-    \input{../Parasitologia/A.README/secciones/ACV-PARASIT-Tema5-Arthropoda}
+     \input{./Parasitologia/ACV-PARASIT-Tema5-Arthropoda}
     \part{Zoología}
-    \input{../Zoologia/A.README/secciones/ACV-ANATANIM-Introduccion}
+     \input{../Zoologia/A.README/secciones/ACV-ANATANIM-Introduccion}
     \part{Metodologías de laboratorio}
-    \input{secciones/ACV-ADENDA-MetodologiasLaboratorio}
+     \input{secciones/ACV-ADENDA-MetodologiasLaboratorio}
     \part{Epidemiología}
     % SEC I - Introducción
-    \input{../Epidemiologia/README/secciones/ACV-EPI-Intro}
+     \input{../Epidemiologia/README/secciones/ACV-EPI-Intro}
     % SEC II - Tipos de estudio
-    \input{../Epidemiologia/README/secciones/ACV-EPI-TiposEstudio}
+     \input{../Epidemiologia/README/secciones/ACV-EPI-TiposEstudio}
     % SEC III - Medidas Frecuencia
-    \input{../Epidemiologia/README/secciones/ACV-EPI-MedidasFrecuencia}
+     \input{../Epidemiologia/README/secciones/ACV-EPI-MedidasFrecuencia}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %APPENDICES
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,11 +182,11 @@
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %\part{Adendas}
     % SEC Adenda Temario Ayudante Investigacion
-    \input{secciones/ACV-Adenda-ExposicionRiesgosBiologicos}
+     \input{secciones/ACV-Adenda-ExposicionRiesgosBiologicos}
     \clearpage
-    \input{secciones/ACV-Adenda-SistemaMedidas}
+     \input{secciones/ACV-Adenda-SistemaMedidas}
     \clearpage
-    \input{secciones/ACV-Adenda-Calibracion}
+     \input{secciones/ACV-Adenda-Calibracion}
     \clearpage
     \renewcommand*{\thesection}{}\textbf{}
     
