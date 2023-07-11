@@ -1,0 +1,116 @@
+\chapter{Medidas de frecuencia}
+La epidemiología analítica se sirve de:
+\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt,partopsep=0pt]
+	\item \textbf{Frecuencias absolutas}: simplemente, el número de individuos por categorías. No permite comparar.
+	\item\textbf{Frecuencias relativas}: número de individuos de la categoría con respecto a la población total.
+	\begin{center}
+		\begin{equation}
+		F_R = \dfrac{\mbox{N individuos}}{\mbox{Total}}
+		\end{equation}
+		\captionof{Ecuacion}[Frecuencia relativa]{Frecuencia relativa: se lee <<El X de cada 10/100 sufre Y>>.}
+	\end{center}
+	\item\textbf{Proporción}: cociente de dos frecuencias absolutas donce el númerador está contenido en el denominador.
+	\begin{center}
+		\begin{equation}
+		P = \dfrac{A}{A + B}
+		\end{equation}
+		\captionof{Ecuacion}[Proporción]{Proporción: se lee <<El X\% de los expuestos posee la característica Y>>.}
+	\end{center}
+	\item\textbf{Razón}: Cociente en el que el numerador no está contenido en el denominador. Compara fenómenos.
+	\begin{center}
+		\begin{equation}
+		R = \dfrac{A}{B}
+		\end{equation}
+		\captionof{Ecuacion}[Razón]{Razón: se lee <<Por cada X individuos de B, hay Y de A>>.}
+	\end{center}
+	\item\textbf{Odds}: Probabilidad de que se produzca un evento entre la que no ocurra.
+	\begin{center}
+		\begin{equation}
+		\mbox{Odds} = \dfrac{P_{(A)}}{1 - P_{(A)}}
+		\end{equation}
+		\captionof{Ecuacion}[Odds]{Odds: se lee <<Por cada X que no sufren la enfermedad, hay 1 que sí>>.}
+	\end{center}
+	\item\textbf{Tasa}: Razón de cambio entre dos magnituds en la que el denominador incluye el tiempo.
+	\begin{center}
+		\begin{equation}
+		\mbox{Tasa} = \dfrac{A}{B\left(\frac{\mbox{udd}}{\mbox{tiempo}}\right)}
+		\end{equation}
+		\captionof{Ecuacion}[Tasa]{Tasa: se lee <<El X \% de los expuestos han desarrollado Y en Z tiempo>>.}
+	\end{center}
+	\item\textbf{Prevalencia}: proporción de individuos de una población que padecen una enfermedad. Se usa en estudios transversales y de casos-controles. Se puede indicar a modo de periodo, se toma la población en un determinado espacio de tiempo.
+	\begin{center}
+		\begin{equation}
+		\mbox{Prevalencia} = \dfrac{\mbox{N casos}}{\mbox{Total}}
+		\end{equation}
+		\captionof{Ecuacion}[Prevalencia]{Prevalencia: se lee <<Hay X casos de cada $10^N$ de individuos enfermos>>.}
+	\end{center}
+	\item\textbf{Incidencia}: medido en personas afectadas/año, es el número de casos nuevos que se desarrollan en una población durante un periodo de tiempo. No indica un sequimiento uniforme, la población se restringe a los que pueden padecer la enfermedad y puede indicar recurrencias. Se diferencia:
+	\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt,partopsep=0pt]
+		\item \textbf{Incidencia acumulada}: probabilidad de enfermedad total en la población de riesgo. Se diferencia entre una incidencia acumulada epidémica (durante epidemias, permite el seguimiento durante el periodo epidémico), de la tasa de letalidad (fallecidos por la enfermedad).
+		\begin{center}
+			\begin{equation}
+			I_A = \dfrac{\mbox{Casos nuevos}}{\mbox{Población inicio}}
+			\end{equation}
+			\captionof{Ecuacion}[Prevalencia]{Prevalencia: se lee <<Hay X casos de cada $10^N$ de individuos enfermos>>.}
+		\end{center}
+		\item\textbf{Tasa de incidencia}: cociente entre casos nuevos de una enfermedad ocurridos durante el periodo y la suma de todos los tiempos de observación. Necesita de un riesgo constante. Suele ser un denominador adecuado de la enfermedad.
+		\begin{center}
+			\begin{equation}
+			T_I = \dfrac{\mbox{Casos nuevos}}{\sum\mbox{Tiempos individuales}}
+			\end{equation}
+			\captionof{Ecuacion}[Prevalencia]{Prevalencia: se lee <<Hay X casos de cada $10^N$ de individuos enfermos>>.}
+		\end{center}
+	\end{itemize}
+	\item\textbf{Otros}:
+	\begin{itemize}[itemsep=0pt,parsep=0pt,topsep=0pt,partopsep=0pt]
+		\item \textbf{Tasa de nacimiento}:
+		\begin{center}
+			\begin{equation}
+				T_{Nacimiento} = \dfrac{\mbox{Nacimientos vivos}}{\sum\mbox{Población en edad media}}
+			\end{equation}
+			\captionof{Ecuacion}{Tasa de nacimiento.}
+		\end{center}
+		\item\textbf{Tasa de fertilidad}:
+		\begin{center}
+			\begin{equation}
+				T_{Fertilidad} = \dfrac{\mbox{Nacimientos vivos}}{\sum\mbox{Mujeres entre 15 y 45}}
+			\end{equation}
+			\captionof{Ecuacion}{Tasa de fertilidad.}
+		\end{center}
+		\item\textbf{Tasa de mortalidad infantil}:
+		\begin{center}
+			\begin{equation}
+				T_{Mort Infant} = \dfrac{\mbox{Infantes muertos}}{\sum\mbox{Nacimientos vivos}}
+			\end{equation}
+			\captionof{Ecuacion}{Tasa de mortalidad infantil.}
+		\end{center}
+		\item\textbf{Tasa de mortinatos}:
+		\begin{center}
+			\begin{equation}
+				T_{Mortinato} = \dfrac{\mbox{Muertes intrauterinas (28 semanas)}}{\sum\mbox{Total nacimientos}}
+			\end{equation}
+			\captionof{Ecuacion}{Tasa de mortinatos.}
+		\end{center}
+		\item\textbf{Tasa de mortalidad perinatal}:
+		\begin{center}
+			\begin{equation}
+				T_{Mort Perinat} = \dfrac{\mbox{Mortinatos + muerte en 1 semana}}{\sum\mbox{Total nacimientos}}
+			\end{equation}
+			\captionof{Ecuacion}{Tasa de mortalidad perinatal.}
+		\end{center}
+	\end{itemize}
+\end{itemize}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{M{2.5cm}N{3.5cm}N{3.5cm}N{3.5cm}}
+		\rowcolor{black}\textcolor{white}{\textbf{Tipo medida}}&\textcolor{white}{\textbf{Proporción}}&\textcolor{white}{\textbf{}}&\textcolor{white}{\textbf{Tasa}}\\
+		Equivalencia&Prevalencia&Riesgo&Tasa de incidencia\\
+		\rowcolor{hiperlightgray}Unidad&---&---&$\frac{\mbox{Casos}}{\mbox{Personas}\cdot\mbox{Tiempo}}$\\
+		Tiempo diagnóstico&Casos Existentes&Casos Nuevos&Casos Nuevos\\
+		\rowcolor{hiperlightgray}Sinónimos&---&Incidencia Acumulada&Densidad de incidencia\\
+		Temporalidad&Momento puntual&Seguimiento&Seguimiento\\
+		\rowcolor{hiperlightgray}Valores&0 a 1&0 a 1&0 a $\infty$\\
+		\hline
+	\end{tabular}
+	\caption{Comparativa de unidades en Epidemiología Analítica.}
+\end{table}
